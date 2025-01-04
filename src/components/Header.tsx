@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import styles from '../styles/Header.module.css'; // Use CSS Modules
+import styles from '../styles/Header.module.scss'; // Use CSS Modules
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,0 +1,114 @@
+/* filepath: /home/taekang1618/code/git/yaongiworld-web/src/styles/Header.module.scss */
+
+$header-background: #333;
+$header-color: #fff;
+$menu-button-size: 1.5rem;
+$menu-button-padding: 0.5rem;
+$side-menu-width: 250px;
+$side-menu-background: #333;
+$side-menu-transition: left 0.3s ease;
+$side-menu-padding-top: 2rem;
+$side-menu-item-margin: 1rem 0;
+$side-menu-item-font-size: 1.2rem;
+$side-menu-item-hover: underline;
+$top-menu-item-margin: 0.5rem 1rem;
+$top-menu-item-font-size: 1.2rem;
+$top-menu-item-hover: underline;
+
+.header {
+  background: $header-background;
+  color: $header-color;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  height: 60px; /* Adjusted height */
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: $header-color;
+  font-size: $menu-button-size;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  padding: $menu-button-padding;
+}
+
+.sideMenu {
+  position: fixed;
+  top: 0;
+  left: -$side-menu-width;
+  width: $side-menu-width;
+  height: 100%;
+  background: $side-menu-background;
+  color: $header-color;
+  transition: $side-menu-transition;
+  padding-top: $side-menu-padding-top;
+  display: none;
+
+  &.open {
+    left: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: $side-menu-item-margin;
+
+      a {
+        color: $header-color;
+        text-decoration: none;
+        font-size: $side-menu-item-font-size;
+
+        &:hover {
+          text-decoration: $side-menu-item-hover;
+        }
+      }
+    }
+  }
+}
+
+.topMenu {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: $top-menu-item-margin;
+
+      a {
+        color: $header-color;
+        text-decoration: none;
+        font-size: $top-menu-item-font-size;
+
+        &:hover {
+          text-decoration: $top-menu-item-hover;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+  }
+
+  .sideMenu {
+    display: block;
+  }
+
+  .topMenu {
+    display: none;
+  }
+}

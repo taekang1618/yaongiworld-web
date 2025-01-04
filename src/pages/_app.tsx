@@ -2,7 +2,7 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Layout from '../components/Layout';
-import '../styles/globals.css';
+import '../styles/globals.scss';
 
 const queryClient = new QueryClient();
 

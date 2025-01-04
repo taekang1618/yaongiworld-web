@@ -1,0 +1,70 @@
+/* filepath: /home/taekang1618/code/git/yaongiworld-web/src/styles/globals.scss */
+
+$font-family: 'Arial', sans-serif;
+$line-height: 1.6;
+$background-color: #f4f4f4;
+$text-color: #333;
+$main-padding: 2rem;
+$main-max-width: 800px;
+$main-background: #fff;
+$main-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$footer-background: #333;
+$footer-color: #fff;
+$footer-padding: 1rem 0;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  line-height: $line-height;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+main {
+  padding: $main-padding;
+  max-width: $main-max-width;
+  margin: 0 auto;
+  background: $main-background;
+  box-shadow: $main-box-shadow;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+}
+
+footer {
+  background: $footer-background;
+  color: $footer-color;
+  text-align: center;
+  padding: $footer-padding;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
